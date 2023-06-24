@@ -1,52 +1,74 @@
+:root {
+    --orange: rgb(247, 142, 22);  
+    --lilac: #4ff7fa;
+    --white: #fff;
+    --Courier: 'Courier New';
+    --font-small: 30px;
+    --font-meduim: 45px;
+    --font-large: 60px;
+    }
 
-/* "*" UNIVERSAL SELECTOR */
-* {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+/* html page padding & margins */
+html {
+    padding: 25px;
+    margin-left: 25px;
+    margin-right: 40px;
 }
 
-/* BACKGROUND COLOR FOR BODY */
+/* body background transition color, font and font color */
 body {
-    background-color: #d9dcd6;
+    font-family: var(--Courier);
+    color: #fff;
+    background-image: linear-gradient(
+        rgb(247, 142, 22) 0%,
+        rgb(233, 193, 149) 100%
+      );
 }
 
-/* HEADER WITH 'TREBUCHET MS FONT STYLE AND OTHER BACKUPS, A BACKGROUND AND FONT COLOR, AND PADDING OF 20PX */
+/* heading sizes */
+h1{
+    font-size: var(--font-large);
+}
+
+h2 {
+    font-size: var(--font-meduim);
+}
+
+h3 {
+    font-size: var(--font-meduim);
+}
+
+/* header font, font color and width */
 .header {
-    padding: 20px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background-color: #2a607c;
-    color: #ffffff;
+  width: 96%;
+  margin: 0 auto;
+  padding: 2.5rem;
+  text-align: left;
 }
 
-
-/* INLINE ORIENTATION OF HEADER ELEMENTS, ALONG WITH FINT SIZE OF 48PX */
+/* first and last name position and size*/
 .header h1 {
+    margin-left: 50px;
     display: inline-block;
-    font-size: 48px;
+    font-size: 10rem;
 }
 
-/* FONT COLOR CHANGE IN "SEO" OF "HORISEON" */
-.header h1 .seo {
-    color: #d9dcd6;
+/*headshot position and boader*/
+.header .headshot {
+    border-radius: 50%;
+    max-width: 5%;
+    
 }
 
-/* PADDING, MARGIN, ORIENTATION, FONT AND FONT SIZE OF ELEMENTS CONTAINED WITHIN CLASS=HEADER, AND DIV */
+/* Header options position and orientation and font size*/
 .header div {
-    padding-top: 15px;
+    padding-top: 130px;
     margin-right: 20px;
     float: right;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 20px;
+    font-size: var(--font-large);
 }
 
-
-/* NO BULLET POINTS TO THE UNORDERED LIST ELEMENTS */
-.header div ul {
-    list-style-type: none;
-}
-
-/* UNORDERED LIST ITEMS DISPLAYED INLINE */
+/* ul inline black display type */
 .header div ul li {
     display: inline-block;
     margin-left: 25px;
@@ -54,170 +76,97 @@ body {
 
 /* ANCHOR FONT COLOR WITH NO TEXT DECORATIONS */
 a {
-    color: #ffffff;
-    text-decoration: none;
+    color:var(--white);
+    font-size: 80px;
+}
+
+/* main background image */
+.center img{
+   position:relative;
+   width: 60%;
+   height: auto;
+   margin-left: 20%;
+   margin-right: 20%;
+}
+
+.center h2{
+    font-size: var(--font-large);
+    text-decoration: underline;
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+}
+/* all card content formatting */
+ .content {
+    padding: 25px 35px 25px 35px;
+    margin: 50px;
+    background-image: linear-gradient(
+        #4ff7fa 0%,
+        rgb(195, 252, 249) 100%
+      );
+}
+
+/* card row settings */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+
+/* card settings */
+.card {
+        flex: 1 0 100%;
+        max-width: 47%;
+        display: inline-flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        min-height: 100%;
+        padding: 2rem;
+        margin: 2rem;
+        outline: 2px solid rgb(195, 252, 249);
+        outline-offset: -2px;
+    
+}
+
+/* DISPLAY STYLE, MARGIN AND MAXIMUM ALLOWED WITH SPECIFIED for all images */
+.card img {
+    background-size: contain;
+    max-width: 100%;
+    justify-content: center;
 }
 
 /* PARAGRAPH FONT SIZE */
-p {
-    font-size: 16px;
-}
-
-/* BACKGROUND IMAGE */
-.hero {
-    height: 800px;
-    width: 100%;
-    margin-bottom: 25px;
-    background-image: url("../images/digital-marketing-meeting.jpg");
-    background-size: cover;
-    background-position: center;
-}
-
-/* ELEMENTS WITH "FOAT-LEFT" CLASS WILL FLOAT LEFT */
-.float-left {
-    float: left;
-    margin-right: 25px;
-}
-
-/* ELEMENTS WITH "FOAT-RIGHT" CLASS WILL FLOAT RIGHT */
-.float-right {
-    float: right;
-    margin-left: 25px;
-}
-
-.content {
-    width: 75%;
-    display: inline-block;
-    margin-left: 20px;
-}
-
-/* BENEFITS CLASS FLATED TO THE RIGHT WITH SPECIFIED PADDING, WIDTH AND HEIGHT */
-.benefits {
-    margin-right: 20px;
-    padding: 20px;
-    clear: both;
-    float: right;
-    width: 20%;
-    height: 100%;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #2589bd;
-}
-
-/* BOTTOM MARGIN AND FONT COLOR SPECIFIED */
-.benefit-lead {
-    margin-bottom: 32px;
-    color: #ffffff;
-}
-
-.benefit-brand {
-    margin-bottom: 32px;
-    color: #ffffff;
-}
-
-.benefit-cost {
-    margin-bottom: 32px;
-    color: #ffffff;
+.card p {
+    font-size: 60px;
+    margin-left: 5%;
 }
 
 /* BOTTOM MARGIN AND TEXT ALIGNMENT SPECIFIED for all headings */
-.benefit-lead h3 {
-    margin-bottom: 10px;
+.card h2 {
     text-align: center;
+    font-size: 100px;
 }
 
-.benefit-brand h3 {
-    margin-bottom: 10px;
-    text-align: center;
+.card:hover,
+.card:hover .card-header {
+  box-shadow: inset 0px 0px 8px var(--orange), 0 0 15px var(--orange);
 }
 
-.benefit-cost h3 {
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-/* DISPLAY STYLE, MARGIN AND MAXIMUM ALLOWED WITH SPECIFIED for all images */
-.benefit-lead img {
-    display: block;
-    margin: 10px auto;
-    max-width: 150px;
-}
-
-.benefit-brand img {
-    display: block;
-    margin: 10px auto;
-    max-width: 150px;
-}
-
-.benefit-cost img {
-    display: block;
-    margin: 10px auto;
-    max-width: 150px;
-}
-
-.search-engine-optimization {
-    margin-bottom: 20px;
-    padding: 50px;
-    height: 300px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #0072bb;
-    color: #ffffff;
-}
-
-.online-reputation-management {
-    margin-bottom: 20px;
-    padding: 50px;
-    height: 300px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #0072bb;
-    color: #ffffff;
-}
-
-.social-media-marketing {
-    margin-bottom: 20px;
-    padding: 50px;
-    height: 300px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #0072bb;
-    color: #ffffff;
-}
-
-/* DISPLAY STYLE, MARGIN AND MAXIMUM ALLOWED WITH SPECIFIED for all images */
-.search-engine-optimization img {
-    max-height: 200px;
-}
-
-.online-reputation-management img {
-    max-height: 200px;
-}
-
-.social-media-marketing img {
-    max-height: 200px;
-}
-
-/* BOTTOM MARGIN AND TEXT ALIGNMENT SPECIFIED for all headings */
-.search-engine-optimization h2 {
-    margin-bottom: 20px;
-    font-size: 36px;
-}
-
-.online-reputation-management h2 {
-    margin-bottom: 20px;
-    font-size: 36px;
-}
-
-.social-media-marketing h2 {
-    margin-bottom: 20px;
-    font-size: 36px;
-}
-
+/* each card's code block grows to the height of the largest code block on the page, making each card even in height */
+.card .p {
+    flex-grow: 1;
+  }
+  
 /* FOOTER*/
 .footer {
-    padding: 30px;
+    padding: 60px;
     clear: both;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: var(--Courier);
     text-align: center;
 }
 
 .footer h2 {
-    font-size: 20px;
+    font-size: var(--font-large);
 }
